@@ -21,9 +21,12 @@
         {%- if articles_page.has_next() %}
         <a id="next_page" rel="next" href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">&#62;</a>
         <a id="last_page" href="{{ SITEURL }}/{{ page_name }}{{ articles_paginator.num_pages }}.html">&#62;&#62;</a>
+        &nbsp;
+        <a href="/archives.html">Archive</a>
         {% else %}
    <!-- <span id="next_page" class="a inactive">&#62;</span>
         <span id="next_page" class="a inactive">&#62;&#62;</span> -->
         {% endif -%}
       </nav>
+
       {%- endif%}

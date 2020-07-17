@@ -7,6 +7,10 @@ function doReferences() {
     citeTags.forEach((el,n) => {
       var key = el.getAttribute('key');
       var btex_elem = btex.find(item => {return item.citationKey == key});
+      if (typeof btex_elem.entryTags.journal == 'undefined') {
+        btex_elem.entryTags.journal = btex_elem.entryTags.booktitle;
+      }
+
       var template = `<label for="${key}" class="margin-toggle sidenote-number"></label><input type="checkbox"
        id="${key}"
        class="margin-toggle"/><span class="sidenote">${btex_elem.entryTags.author}  (${btex_elem.entryTags.year}) `;
@@ -15,7 +19,11 @@ function doReferences() {
       } else {
         template += `<a href="${btex_elem.entryTags.url}">&ldquo;${btex_elem.entryTags.title}&rdquo;</a>. `;
       }
-      template += `<i>${btex_elem.entryTags.journal}</i>`;
+      if (typeof btex_elem.entryTags.journal == 'undefined') {
+        template += `<i>${btex_elem.entryTags.publisher}</i>`;
+      } else {
+        template += `<i>${btex_elem.entryTags.journal}</i>`;
+      }
        if (btex_elem.entryTags.openaccess){
          template += ` (<a href="${btex_elem.entryTags.openaccess}">Open access version</a>)`;
        }
@@ -47,18 +55,14 @@ function doReferences() {
       return 0;});
     template = "<ul>";
     cited.forEach(function(element){
-      var journal = element.entryTags.journal;
-      if (typeof journal == 'undefined') {
-        journal = element.entryTags.booktitle;
-      }
-      template += `<li id="${element.citationKey}">${element.entryTags.author}  (${element.entryTags.year})`
+      template += `<li id="${element.citationKey}">${element.entryTags.author}  (${element.entryTags.year}) `
 
       if (typeof element.entryTags.url == 'undefined') {
         template += `&ldquo;${element.entryTags.title}&rdquo;. `;
        } else {
         template += `<a href="${element.entryTags.url}">&ldquo;${element.entryTags.title}&rdquo;</a>. `;
        }
-       template += `<i>${journal}</i></li>`;
+       template += `<i>${element.entryTags.journal}</i></li>`;
     });
     refs.innerHTML = template + '</ul>';
   }
