@@ -24,10 +24,13 @@ function doReferences() {
       } else {
         template += `<i>${btex_elem.entryTags.journal}</i>`;
       }
-       if (btex_elem.entryTags.openaccess){
-         template += ` (<a href="${btex_elem.entryTags.openaccess}">Open access version</a>)`;
-       }
-       template += `.</span>`;
+      if (btex_elem.entryTags.openaccess){
+        template += ` (<a href="${btex_elem.entryTags.openaccess}">Open access version</a>)`;
+      }
+      if (btex_elem.entryTags.scihub){
+        template += ` (<a href="${btex_elem.entryTags.scihub}">sci-hub</a>)`;
+      }
+      template += `.</span>`;
       el.innerHTML = template;
       if (cited.indexOf(btex_elem) == -1) {
         cited.push(btex_elem);        

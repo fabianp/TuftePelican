@@ -293,3 +293,8 @@ address {
 .authors {
   margin-bottom: 1em;
 }
+
+/* don't inherit style from parent text  */
+.sidenote {
+  font-style: normal;
+}
