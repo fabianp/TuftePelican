@@ -96,7 +96,7 @@ function doTOC() {
     var sections = document.querySelectorAll("h2");
     sections.forEach(function(element, i){
         var text = element.innerHTML;
-        var sectTitle = `${i+1}. ${text}`;
+        var sectTitle = `<a href="#sec${i+1}">${i+1}. ${text}</a>`;
         element.innerHTML = sectTitle;
         element.setAttribute('id', 'sec' + (i+1));
         template = template + `<span style="margin-left: 20px"><a href="#sec${i+1}">${sectTitle}</a></span><br/>`;
