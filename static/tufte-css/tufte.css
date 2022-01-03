@@ -132,6 +132,7 @@ li { padding: 0.5rem 0; }
 
 figure { padding: 0;
          border: 0;
+         text-align: center;
          font-size: 100%;
          font: inherit;
          vertical-align: baseline;
