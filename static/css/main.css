@@ -56,7 +56,7 @@ article div ol li p { padding: 0;
                 margin-top: 0;
                 margin-bottom: 1rem; }
 
-a.navitemlink { text-decoration: none;
+.navitemlink { text-decoration: none;
                 font-variant: small-caps;
                 font-size: 25px}
 
@@ -297,4 +297,11 @@ address {
 /* don't inherit style from parent text  */
 .sidenote {
   font-style: normal;
+}
+
+.sideimage {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+  box-shadow: 6px 6px 3px grey;
 }

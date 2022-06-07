@@ -62,9 +62,24 @@
    </nav> -->
    <nav class="navmenu" id="navmenu">
     <li><a class="navitemlink" href="/">Blog</a></li>
-    <li><a class="navitemlink" href="/pages/publications.html">Publications</a></li>
-    <li><a class="navitemlink" href="/pages/teaching.html">Teaching</a></li>
-    <li><a class="navitemlink" href="/pages/about.html">About</a></li>
+    {% if page and page.slug == 'publications' %}
+      <li><span class="navitemlink" href="/pages/publications.html">Publications</span></li>
+    {% else %}
+      <li><a class="navitemlink" href="/pages/publications.html">Publications</a></li>
+    {% endif %}
+
+    {% if page and page.slug == 'teaching' %}
+      <li><span class="navitemlink" href="/pages/teaching.html">Teaching</span></li>
+      {% else %}
+      <li><a class="navitemlink" href="/pages/teaching.html">Teaching</a></li>
+    {% endif %}
+
+    
+    {% if page and page.slug == 'about' %}
+      <li><span class="navitemlink">About</li>
+      {% else %}
+      <li><a class="navitemlink" href="/pages/about.html">About</a></li>
+    {% endif %}
     <li><a class="navitemlink" href="/archives.html">Archive</a></li>
    </nav>
  </header>
