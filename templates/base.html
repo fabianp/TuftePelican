@@ -61,7 +61,11 @@
     {% endfor %}
    </nav> -->
    <nav class="navmenu" id="navmenu">
+    {% if article or page_name == 'index' %}
+    <li><span class="navitemlink" href="/">Blog</span></li>
+    {%else %}
     <li><a class="navitemlink" href="/">Blog</a></li>
+    {% endif %}
     {% if page and page.slug == 'publications' %}
       <li><span class="navitemlink" href="/pages/publications.html">Publications</span></li>
     {% else %}
@@ -77,10 +81,14 @@
     
     {% if page and page.slug == 'about' %}
       <li><span class="navitemlink">About</li>
-      {% else %}
+    {% else %}
       <li><a class="navitemlink" href="/pages/about.html">About</a></li>
     {% endif %}
+    {% if page_name == 'archives' %}
+    <li><span class="navitemlink" href="/archives.html">Archive</span></li>
+    {% else %}
     <li><a class="navitemlink" href="/archives.html">Archive</a></li>
+    {% endif %}
    </nav>
  </header>
 {% block content%}
