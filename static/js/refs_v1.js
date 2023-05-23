@@ -80,7 +80,9 @@ function doReferences() {
        }
        template += `<i>${element.entryTags.journal}</i></li>`;
     });
-    refs.innerHTML = template + '</ul>';
+    if (template) { /* check if template is not empty */
+      refs.innerHTML = template + '</ul>';
+    }
   }
 
 
