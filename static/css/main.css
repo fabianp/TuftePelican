@@ -305,3 +305,8 @@ address {
   max-width: 200px;
   box-shadow: 6px 6px 3px grey;
 }
+
+.no-tufte-underline:link {
+  background: unset;
+  text-shadow: unset;
+}

@@ -60,34 +60,13 @@
     {% endfor %}
    </nav> -->
    <nav class="navmenu" id="navmenu">
-    {% if article or page_name == 'index' %}
-    <li><span class="navitemlink" href="/">Blog</span></li>
-    {%else %}
-    <li><a class="navitemlink" href="/">Blog</a></li>
-    {% endif %}
-    {% if page and page.slug == 'publications' %}
-      <li><span class="navitemlink" href="/pages/publications.html">Publications</span></li>
-    {% else %}
-      <li><a class="navitemlink" href="/pages/publications.html">Publications</a></li>
-    {% endif %}
+    <li><a class="navitemlink {% if article or page_name == 'index' %}no-tufte-underline{% endif %}" href="/">Blog</a></li>   
+    <li><a class="navitemlink  {% if page and page.slug == 'publications' %}no-tufte-underline{% endif %}" href="/pages/publications.html">Publications</a></li>    
+    <li><a class="navitemlink {% if page and page.slug == 'teaching' %}no-tufte-underline{% endif %}" href="/pages/teaching.html">Teaching</a></li>    
+    <li><a class="navitemlink {% if page and page.slug == 'about' %}no-tufte-underline{% endif %}" href="/pages/about.html">About</a></li>
+    <li><a class="navitemlink {% if page_name == 'archives' %}no-tufte-underline{% endif %}" href="/archives.html">Archive</a></li>    
+    &nbsp;&nbsp;<li><a class="navitemlink no-tufte-underline" href="https://github.com/fabianp/"><img src="/images/2023/icons8-github.svg" alt=""></a></li><li><a class="navitemlink no-tufte-underline" href="https://twitter.com/fpedregosa/"><img src="/images/2023/icons8-twitter.svg" alt=""></a></li>
 
-    {% if page and page.slug == 'teaching' %}
-      <li><span class="navitemlink" href="/pages/teaching.html">Teaching</span></li>
-      {% else %}
-      <li><a class="navitemlink" href="/pages/teaching.html">Teaching</a></li>
-    {% endif %}
-
-    
-    {% if page and page.slug == 'about' %}
-      <li><span class="navitemlink">About</li>
-    {% else %}
-      <li><a class="navitemlink" href="/pages/about.html">About</a></li>
-    {% endif %}
-    {% if page_name == 'archives' %}
-    <li><span class="navitemlink" href="/archives.html">Archive</span></li>
-    {% else %}
-    <li><a class="navitemlink" href="/archives.html">Archive</a></li>
-    {% endif %}
    </nav>
  </header>
 {% block content%}
