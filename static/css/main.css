@@ -156,6 +156,21 @@ content: "Corollary (" attr(text) ") ";
   content: "Definition (" attr(text) ") ";
 }
 
+
+.assumption {
+  display: block;
+  margin: 12px 0;
+  font-style: italic;
+}
+.assumption:before {
+  content: "Assumption.";
+  font-weight: bold;
+  font-style: normal;
+}
+.assumption[text]:before {
+  content: "Assumption (" attr(text) ") ";
+}
+
 .remark {
   display: block;
   margin: 12px 0;
