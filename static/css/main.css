@@ -1,10 +1,5 @@
 /*
-	Name: Smashing HTML5
-	Date: July 2009
-	Description: Sample layout for HTML5 and CSS3 goodness.
-	Version: 1.0
-	Author: Enrique Ramírez
-	Autor URI: http://enrique-ramirez.com
+	Tweaks on top of tufte css
 */
 
 /* Imports */
@@ -95,6 +90,56 @@ td, th {
 
 tr:nth-child(even) {
    background-color: #dddddd;
+}
+
+/* overwrite dark mode since we're not ready for it */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #fffff8;
+    color: #111;
+  }
+}
+@media (prefers-color-scheme: dark) {
+a:link, .tufte-underline, .hover-tufte-underline:hover {
+  text-decoration: none;
+  background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(currentColor, currentColor);
+  background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor);
+  -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+  background-position: 0% 93%, 100% 93%, 0% 93%;
+}
+}
+
+/* we don't always use sections. The following is taken from tufte.css minus the section > part */
+p,
+footer,
+table {
+    width: 55%;
+}
+
+/* 50 + 5 == 55, to be the same width as paragraph */
+dl,
+ol,
+ul {
+    width: 50%;
+    -webkit-padding-start: 5%;
+}
+
+@media (max-width: 760px) {
+  p,
+  footer,
+  table {
+      width: 100%;
+  }
+
+  dl,
+  ol,
+  ul {
+      width: 90%;
+  }
 }
 
 /* see http://drz.ac/2013/01/17/latex-theorem-like-environments-for-the-web/
@@ -324,4 +369,4 @@ address {
 .no-tufte-underline:link {
   background: unset;
   text-shadow: unset;
-}
+}``

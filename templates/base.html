@@ -43,7 +43,7 @@
     }
   </style>
 
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 {% endblock headers %}
 </head>
 
@@ -65,17 +65,11 @@
     <li><a class="navitemlink {% if page and page.slug == 'teaching' %}no-tufte-underline{% endif %}" href="/pages/teaching.html">Teaching</a></li>    
     <li><a class="navitemlink {% if page and page.slug == 'about' %}no-tufte-underline{% endif %}" href="/pages/about.html">About</a></li>
     <li><a class="navitemlink {% if page_name == 'archives' %}no-tufte-underline{% endif %}" href="/archives.html">Archive</a></li>    
-    &nbsp;&nbsp;<li><a class="navitemlink no-tufte-underline" href="https://github.com/fabianp/"><img style="max-width: 32px" src="/theme/images/icons8-github.svg" alt=""></a></li><li><a class="navitemlink no-tufte-underline" href="https://twitter.com/fpedregosa/"><img style="max-width: 32px" src="/theme/images/icons8-twitter.svg" alt=""></a></li><li><a class="navitemlink no-tufte-underline" href="https://sigmoid.social/@fabian"><img style="max-width: 32px" src="/theme/images/icons8-mastodon.svg" alt=""></a></li>
+    <!-- &nbsp;&nbsp;<li><a class="navitemlink no-tufte-underline" href="https://github.com/fabianp/"><img style="max-width: 32px" src="/theme/images/icons8-github.svg" alt=""></a></li><li><a class="navitemlink no-tufte-underline" href="https://twitter.com/fpedregosa/"><img style="max-width: 32px" src="/theme/images/icons8-twitter.svg" alt=""></a></li><li><a class="navitemlink no-tufte-underline" href="https://sigmoid.social/@fabian"><img style="max-width: 32px" src="/theme/images/icons8-mastodon.svg" alt=""></a></li> -->
    </nav>
  </header>
 {% block content%}
 {% endblock content %}
-<!-- <footer>
-  <p>Powered by <a href="http://pelican.readthedocs.org">Pelican</a></p>
-</footer> -->
-<script id="dsq-count-scr" src="//isaythings.disqus.com/count.js" async></script>
-<!-- for mastodon verification -->
-<a style="font-size: 0" rel="me" href="https://sigmoid.social/@fabian">Mastodon</a>
 </body>
 
 </html>
