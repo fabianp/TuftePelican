@@ -17,6 +17,7 @@
   <meta name="author" content="{{ AUTHOR }}" />
   <link rel="stylesheet" type="text/css" href="/theme/tufte-css/tufte.css" />
   <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
   <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png" />
   <link rel="shortcut icon" href="/static/favicon.ico" />
   {% if FEED_ALL_ATOM %}
@@ -65,8 +66,16 @@
     <li><a class="navitemlink {% if page and page.slug == 'teaching' %}no-tufte-underline{% endif %}" href="/pages/teaching.html">Teaching</a></li>    
     <li><a class="navitemlink {% if page and page.slug == 'about' %}no-tufte-underline{% endif %}" href="/pages/about.html">About</a></li>
     <li><a class="navitemlink {% if page_name == 'archives' %}no-tufte-underline{% endif %}" href="/archives.html">Archive</a></li>    
-    <!-- &nbsp;&nbsp;<li><a class="navitemlink no-tufte-underline" href="https://github.com/fabianp/"><img style="max-width: 32px" src="/theme/images/icons8-github.svg" alt=""></a></li><li><a class="navitemlink no-tufte-underline" href="https://twitter.com/fpedregosa/"><img style="max-width: 32px" src="/theme/images/icons8-twitter.svg" alt=""></a></li><li><a class="navitemlink no-tufte-underline" href="https://sigmoid.social/@fabian"><img style="max-width: 32px" src="/theme/images/icons8-mastodon.svg" alt=""></a></li> -->
-   </nav>
+    &nbsp;&nbsp;<li><a class="navitemlink no-tufte-underline" href="https://github.com/fabianp/"><i class="fa-brands fa-github"></i></a></li>
+    <li><a class="navitemlink no-tufte-underline" href="https://twitter.com/fpedregosa/"><i class="fa-brands fa-x-twitter"></i></a></li>
+    <!-- <li><a class="navitemlink no-tufte-underline" href="https://sigmoid.social/@fabian"><img style="max-width: 32px" src="/theme/images/icons8-mastodon.svg" alt=""></a></li> -->
+    <!-- <li class="toggle-container">
+      <button id="light-toggle" title="Change theme">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </button>
+    </li> -->
+</nav>
  </header>
 {% block content%}
 {% endblock content %}
