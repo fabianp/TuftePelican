@@ -34,7 +34,6 @@ article {
   padding: 1rem 0rem 2.5rem 0rem;
 }
 
-
 hr {
   margin-left: 0;
   width: "75%";
@@ -98,26 +97,88 @@ tr:nth-child(even) {
    background-color: #dddddd;
 }
 
-/* overwrite dark mode since we're not ready for it */
-/* @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #fffff8;
-    color: #111;
+
+/* tweaks for dark / light mode */
+
+#light-toggle {
+  padding: 0;
+  border: 0;
+  background-color: inherit;
+  color: var(--global-text-color);
+  cursor: pointer;
+  position: relative;
+  bottom: 4px;
+}
+.fa-sun {
+  display : none;
+}
+.fa-moon {
+  padding-left: 10px;
+  padding-top: 12px;
+  display : block;
+}
+
+html[data-theme='dark'] {
+
+  --global-bg-color: #151515;
+  --global-text-color: #ddd;
+  --global-shadow-color: #151515;
+  --global-text-shadow: 0.03em 0 #151515, -0.03em 0 #151515, 0 0.03em #151515, 0 -0.03em #151515, 0.06em 0 #151515, -0.06em 0 #151515, 0.09em 0 #151515, -0.09em 0 #151515, 0.12em 0 #151515, -0.12em 0 #151515, 0.15em 0 #151515, -0.15em 0 #151515;
+  --global-todo-color: yellow;
+
+  .fa-sun {
+    padding-left: 10px;
+    padding-top: 12px;
+    display: block;
+  }
+
+  .fa-moon {
+    display: none;
   }
 }
-@media (prefers-color-scheme: dark) {
-a:link, .tufte-underline, .hover-tufte-underline:hover {
-  text-decoration: none;
-  background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(currentColor, currentColor);
-  background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor);
-  -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
-  background-position: 0% 93%, 100% 93%, 0% 93%;
+
+html[data-theme='light'] {
+
+  --global-bg-color: #fffff8;
+  --global-text-color: #111;
+  --global-shadow-color: #fffff8;
+  --global-text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+  --global-todo-color: blue;
 }
-} */
+
+.todo {
+  color: var(--global-todo-color);
+}
+
+body {
+  background-color: var(--global-bg-color) !important;
+  color: var(--global-text-color) !important;
+}
+
+a:link,
+.tufte-underline,
+.hover-tufte-underline:hover {
+  text-shadow: var(--global-text-shadow) !important;
+}
+
+fieldset {
+  border: 3px solid var(--global-text-color);
+  border-radius: 5px;
+  padding: 15px;
+}
+fieldset legend {
+  
+  padding: 5px 10px ;
+  font-size: 32px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.framed {
+  border: 1px var(--global-text-color) dashed;
+  padding: 20px;
+}
+
 
 /* we don't always use sections. The following is taken from tufte.css minus the section > part */
 p,
@@ -330,17 +391,6 @@ input[type='checkbox'] {
     margin-right: auto;
 }
 
-.framed {
-  border: 1px black dashed;
-  padding: 20px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .framed {
-    border: 1px white dashed;
-  }
-}
-
 .fullwidth ul {
   width: 100% !important;
 }
@@ -355,6 +405,7 @@ input[type='checkbox'] {
 }
 
 .underline{
+  /* TODO: does this work with the dark theme? */
   background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
   -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
   -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
@@ -387,4 +438,4 @@ address {
 .no-tufte-underline:link {
   background: unset;
   text-shadow: unset;
-}``
+}
