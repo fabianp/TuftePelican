@@ -28,11 +28,17 @@ h3 { font-style: italic;
      margin-bottom: 0;
      line-height: 1.08888888888889; }
 
-article { position: relative;
-          padding: 1rem 0rem 2.5rem 0rem; } // reduced top and bottom padding by 50%
+/* reduced top and bottom padding by 50% */
+article {
+  position: relative;
+  padding: 1rem 0rem 2.5rem 0rem;
+}
 
-hr { margin-left: 0;
-     width: 75%; }
+
+hr {
+  margin-left: 0;
+  width: "75%";
+}
 
 script {
   display: none;
@@ -93,7 +99,7 @@ tr:nth-child(even) {
 }
 
 /* overwrite dark mode since we're not ready for it */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     background-color: #fffff8;
     color: #111;
@@ -111,7 +117,7 @@ a:link, .tufte-underline, .hover-tufte-underline:hover {
   text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
   background-position: 0% 93%, 100% 93%, 0% 93%;
 }
-}
+} */
 
 /* we don't always use sections. The following is taken from tufte.css minus the section > part */
 p,
@@ -140,6 +146,12 @@ ul {
   ul {
       width: 90%;
   }
+}
+
+
+/* prevent mathjax from coloring eqref */
+mjx-container[jax="SVG"] > svg a {
+  fill: inherit !important;
 }
 
 /* see http://drz.ac/2013/01/17/latex-theorem-like-environments-for-the-web/
@@ -321,6 +333,12 @@ input[type='checkbox'] {
 .framed {
   border: 1px black dashed;
   padding: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .framed {
+    border: 1px white dashed;
+  }
 }
 
 .fullwidth ul {
