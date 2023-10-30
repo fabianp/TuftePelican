@@ -125,6 +125,7 @@ html[data-theme='dark'] {
   --global-shadow-color: #151515;
   --global-text-shadow: 0.03em 0 #151515, -0.03em 0 #151515, 0 0.03em #151515, 0 -0.03em #151515, 0.06em 0 #151515, -0.06em 0 #151515, 0.09em 0 #151515, -0.09em 0 #151515, 0.12em 0 #151515, -0.12em 0 #151515, 0.15em 0 #151515, -0.15em 0 #151515;
   --global-todo-color: yellow;
+  --global-sidenote-color: rgb(255, 68, 68);
 
   .fa-sun {
     padding-left: 10px;
@@ -135,6 +136,8 @@ html[data-theme='dark'] {
   .fa-moon {
     display: none;
   }
+
+
 }
 
 html[data-theme='light'] {
@@ -144,7 +147,11 @@ html[data-theme='light'] {
   --global-shadow-color: #fffff8;
   --global-text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
   --global-todo-color: blue;
+  --global-sidenote-color: #f00000;
 }
+
+.sidenote:before { color: var(--global-sidenote-color); }
+.sidenote-number:after { color: var(--global-sidenote-color); }
 
 .todo {
   color: var(--global-todo-color);
