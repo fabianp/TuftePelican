@@ -436,3 +436,7 @@ address {
   background: unset;
   text-shadow: unset;
 }
+
+.red {
+  color: red;
+}
