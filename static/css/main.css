@@ -98,56 +98,15 @@ tr:nth-child(even) {
 }
 
 
-/* tweaks for dark / light mode */
+/* Dark mode theme variables */
 
-#light-toggle {
-  padding: 0;
-  border: 0;
-  background-color: inherit;
-  color: var(--global-text-color);
-  cursor: pointer;
-  position: relative;
-  bottom: 4px;
-}
-.fa-sun {
-  display : none;
-}
-.fa-moon {
-  padding-left: 10px;
-  padding-top: 12px;
-  display : block;
-}
-
-html[data-theme='dark'] {
-
+:root, html {
   --global-bg-color: #151515;
   --global-text-color: #ddd;
   --global-shadow-color: #151515;
   --global-text-shadow: 0.03em 0 #151515, -0.03em 0 #151515, 0 0.03em #151515, 0 -0.03em #151515, 0.06em 0 #151515, -0.06em 0 #151515, 0.09em 0 #151515, -0.09em 0 #151515, 0.12em 0 #151515, -0.12em 0 #151515, 0.15em 0 #151515, -0.15em 0 #151515;
   --global-todo-color: yellow;
   --global-sidenote-color: rgb(255, 68, 68);
-
-  .fa-sun {
-    padding-left: 10px;
-    padding-top: 12px;
-    display: block;
-  }
-
-  .fa-moon {
-    display: none;
-  }
-
-
-}
-
-html[data-theme='light'] {
-
-  --global-bg-color: #fffff8;
-  --global-text-color: #111;
-  --global-shadow-color: #fffff8;
-  --global-text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
-  --global-todo-color: blue;
-  --global-sidenote-color: #f00000;
 }
 
 .sidenote:before { color: var(--global-sidenote-color); }
@@ -165,6 +124,8 @@ body {
 a:link,
 .tufte-underline,
 .hover-tufte-underline:hover {
+  background: -webkit-linear-gradient(var(--global-bg-color), var(--global-bg-color)), -webkit-linear-gradient(var(--global-bg-color), var(--global-bg-color)), -webkit-linear-gradient(currentColor, currentColor) !important;
+  background: linear-gradient(var(--global-bg-color), var(--global-bg-color)), linear-gradient(var(--global-bg-color), var(--global-bg-color)), linear-gradient(currentColor, currentColor) !important;
   text-shadow: var(--global-text-shadow) !important;
 }
 
