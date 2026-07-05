@@ -124,8 +124,8 @@ body {
 a:link,
 .tufte-underline,
 .hover-tufte-underline:hover {
-  background: -webkit-linear-gradient(var(--global-bg-color), var(--global-bg-color)), -webkit-linear-gradient(var(--global-bg-color), var(--global-bg-color)), -webkit-linear-gradient(currentColor, currentColor) !important;
-  background: linear-gradient(var(--global-bg-color), var(--global-bg-color)), linear-gradient(var(--global-bg-color), var(--global-bg-color)), linear-gradient(currentColor, currentColor) !important;
+  background-image: -webkit-linear-gradient(var(--global-bg-color), var(--global-bg-color)), -webkit-linear-gradient(var(--global-bg-color), var(--global-bg-color)), -webkit-linear-gradient(currentColor, currentColor) !important;
+  background-image: linear-gradient(var(--global-bg-color), var(--global-bg-color)), linear-gradient(var(--global-bg-color), var(--global-bg-color)), linear-gradient(currentColor, currentColor) !important;
   text-shadow: var(--global-text-shadow) !important;
 }
 
