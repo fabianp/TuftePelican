@@ -152,6 +152,21 @@ fieldset legend {
   padding: 20px;
 }
 
+.callout {
+  width: 55%;
+  border-left: 4px solid #d95f02;
+  background-color: rgba(255, 255, 255, 0.035);
+  padding: 14px 18px;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+  box-sizing: border-box;
+}
+
+.callout p {
+  width: 100% !important;
+  margin: 0;
+}
+
 
 /* we don't always use sections. The following is taken from tufte.css minus the section > part */
 p,
