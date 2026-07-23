@@ -5,28 +5,36 @@
 /* Imports */
 @import url("typogrify.css");
 
-header nav li { display: inline;
-                padding-right: .5rem; }
+header nav li {
+  display: inline;
+  padding-right: .5rem;
+}
 
-h1 { font-weight: 400;
-     margin-top: 1.568rem;
-     margin-bottom: 1.568rem;
-     font-size: 2.5rem;
-     line-height: 0.784; }
+h1 {
+  font-weight: 400;
+  margin-top: 1.568rem;
+  margin-bottom: 1.568rem;
+  font-size: 2.5rem;
+  line-height: 0.784;
+}
 
-h2 { font-style: italic;
-     font-weight: 400;
-     margin-top: 3rem;
-     margin-bottom: 0;
-     font-size: 2.1rem;
-     line-height: 0.933333333333333; }
+h2 {
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 3rem;
+  margin-bottom: 0;
+  font-size: 2.1rem;
+  line-height: 0.933333333333333;
+}
 
-h3 { font-style: italic;
-     font-weight: 400;
-     font-size: 1.8rem;
-     margin-top: 2.1777777777777778rem;
-     margin-bottom: 0;
-     line-height: 1.08888888888889; }
+h3 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-top: 2.1777777777777778rem;
+  margin-bottom: 0;
+  line-height: 1.08888888888889;
+}
 
 /* reduced top and bottom padding by 50% */
 article {
@@ -43,69 +51,85 @@ script {
   display: none;
 }
 
-article div hr { margin-left: 0;
-     width: 75%; }
-
-article div ol li { margin-top: 0;
-                 margin-bottom: 0; }
-
-article div ol li p { padding: 0;
-                      margin: 0; }
-
-.websitetitle { font-size: 4rem;
-                margin-top: 0;
-                margin-bottom: 1rem; }
-
-.navitemlink { text-decoration: none;
-                font-variant: small-caps;
-                font-size: 25px}
-
-
-p > figure { padding: 0;
-         border: 0;
-         font-size: 100%;
-         font: inherit;
-         vertical-align: baseline;
-         max-width: 55%;
-         -webkit-margin-start: 0;
-         -webkit-margin-end: 0;
-         margin: 0 0 3em 0; }
-
-p > figure > figcaption { float: right;
-             clear: right;
-             margin-right: -48%;
-             margin-top: 0;
-             margin-bottom: 0;
-             font-size: 1.1rem;
-             line-height: 1.6;
-             vertical-align: baseline;
-             position: relative;
-             max-width: 40%; }
-
-table {
-   font-family: arial, sans-serif;
-   border-collapse: collapse;
+article div hr {
+  margin-left: 0;
+  width: 75%;
 }
 
-td, th {
-   border: 1px solid #333333;
-   text-align: left;
-   padding: 8px;
+article div ol li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+article div ol li p {
+  padding: 0;
+  margin: 0;
+}
+
+.websitetitle {
+  font-size: 4rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.navitemlink {
+  text-decoration: none;
+  font-variant: small-caps;
+  font-size: 25px
+}
+
+
+p>figure {
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  max-width: 55%;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  margin: 0 0 3em 0;
+}
+
+p>figure>figcaption {
+  float: right;
+  clear: right;
+  margin-right: -48%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  vertical-align: baseline;
+  position: relative;
+  max-width: 40%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid #333333;
+  text-align: left;
+  padding: 8px;
 }
 
 tr:nth-child(even) {
-   background-color: #222222;
+  background-color: #222222;
 }
 
 th {
-   background-color: #1a1a1a;
-   border-bottom: 2px solid #444444;
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #444444;
 }
 
 
 /* Dark mode theme variables */
 
-:root, html {
+:root,
+html {
   --global-bg-color: #151515;
   --global-text-color: #ddd;
   --global-shadow-color: #151515;
@@ -114,8 +138,13 @@ th {
   --global-sidenote-color: rgb(255, 68, 68);
 }
 
-.sidenote:before { color: var(--global-sidenote-color); }
-.sidenote-number:after { color: var(--global-sidenote-color); }
+.sidenote:before {
+  color: var(--global-sidenote-color);
+}
+
+.sidenote-number:after {
+  color: var(--global-sidenote-color);
+}
 
 .todo {
   color: var(--global-todo-color);
@@ -139,9 +168,10 @@ fieldset {
   border-radius: 5px;
   padding: 15px;
 }
+
 fieldset legend {
-  
-  padding: 5px 10px ;
+
+  padding: 5px 10px;
   font-size: 32px;
   border-radius: 5px;
   margin-left: 20px;
@@ -153,7 +183,6 @@ fieldset legend {
 }
 
 .callout {
-  width: 55%;
   border-left: 4px solid #d95f02;
   background-color: rgba(255, 255, 255, 0.035);
   padding: 14px 18px;
@@ -162,44 +191,40 @@ fieldset legend {
   box-sizing: border-box;
 }
 
-.callout p {
-  width: 100% !important;
-  margin: 0;
-}
-
 
 /* we don't always use sections. The following is taken from tufte.css minus the section > part */
 p,
 footer,
 table {
-    width: 55%;
+  width: 55%;
 }
 
 /* 50 + 5 == 55, to be the same width as paragraph */
 dl,
 ol,
 ul {
-    width: 50%;
-    -webkit-padding-start: 5%;
+  width: 50%;
+  -webkit-padding-start: 5%;
 }
 
 @media (max-width: 760px) {
+
   p,
   footer,
   table {
-      width: 100%;
+    width: 100%;
   }
 
   dl,
   ol,
   ul {
-      width: 90%;
+    width: 90%;
   }
 }
 
 
 /* prevent mathjax from coloring eqref */
-mjx-container[jax="SVG"] > svg a {
+mjx-container[jax="SVG"]>svg a {
   fill: inherit !important;
 }
 
@@ -207,15 +232,17 @@ mjx-container[jax="SVG"] > svg a {
 and http://felix11h.github.io/blog/mathjax-theorems
 */
 .theorem {
-    display: block;
-    margin: 12px 0;
-    font-style: italic;
+  display: block;
+  margin: 12px 0;
+  font-style: italic;
 }
+
 .theorem:before {
-    content: "Theorem.";
-    font-weight: bold;
-    font-style: normal;
+  content: "Theorem.";
+  font-weight: bold;
+  font-style: normal;
 }
+
 .theorem[text]:before {
   content: "Theorem (" attr(text) ") ";
 }
@@ -225,25 +252,29 @@ and http://felix11h.github.io/blog/mathjax-theorems
   margin: 12px 0;
   font-style: italic;
 }
+
 .corollary:before {
   content: "Corollary.";
   font-weight: bold;
   font-style: normal;
 }
+
 .corollary[text]:before {
-content: "Corollary (" attr(text) ") ";
+  content: "Corollary (" attr(text) ") ";
 }
 
 .lemma {
-    display: block;
-    margin: 12px 0;
-    font-style: italic;
+  display: block;
+  margin: 12px 0;
+  font-style: italic;
 }
+
 .lemma:before {
-    content: "Lemma.";
-    font-weight: bold;
-    font-style: normal;
+  content: "Lemma.";
+  font-weight: bold;
+  font-style: normal;
 }
+
 .lemma[text]:before {
   content: "Lemma (" attr(text) ") ";
 }
@@ -253,11 +284,13 @@ content: "Corollary (" attr(text) ") ";
   margin: 12px 0;
   font-style: italic;
 }
+
 .definition:before {
   content: "Definition.";
   font-weight: bold;
   font-style: normal;
 }
+
 .definition[text]:before {
   content: "Definition (" attr(text) ") ";
 }
@@ -268,11 +301,13 @@ content: "Corollary (" attr(text) ") ";
   margin: 12px 0;
   font-style: italic;
 }
+
 .assumption:before {
   content: "Assumption.";
   font-weight: bold;
   font-style: normal;
 }
+
 .assumption[text]:before {
   content: "Assumption (" attr(text) ") ";
 }
@@ -282,11 +317,13 @@ content: "Corollary (" attr(text) ") ";
   margin: 12px 0;
   font-style: italic;
 }
+
 .remark:before {
   content: "Remark.";
   font-weight: bold;
   font-style: normal;
 }
+
 .remark[text]:before {
   content: "Remark (" attr(text) ") ";
 }
@@ -296,19 +333,21 @@ content: "Corollary (" attr(text) ") ";
 }
 
 .proof {
-    display: block;
-    font-style: normal;
-    margin: 0;
+  display: block;
+  font-style: normal;
+  margin: 0;
 }
+
 .proof:before {
-    content: "Proof.";
-    font-style: italic;
-    font-size: 1.4rem;
+  content: "Proof.";
+  font-style: italic;
+  font-size: 1.4rem;
 }
+
 .proof:after {
-    content: "\25FC";
-    /* float:right; */
-    font-size: 1.8rem;
+  content: "\25FC";
+  /* float:right; */
+  font-size: 1.8rem;
 }
 
 
@@ -345,7 +384,7 @@ input[type='checkbox'] {
   transition: transform .2s ease-out;
 }
 
-.toggle:checked + .lbl-toggle::before {
+.toggle:checked+.lbl-toggle::before {
   transform: rotate(90deg) translateX(-3px);
 }
 
@@ -355,12 +394,12 @@ input[type='checkbox'] {
   transition: max-height .25s ease-in-out;
 }
 
-.toggle:checked + .lbl-toggle + .collapsible-content {
+.toggle:checked+.lbl-toggle+.collapsible-content {
   max-height: none;
   overflow: visible;
 }
 
-.toggle:checked + .lbl-toggle {
+.toggle:checked+.lbl-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -374,9 +413,9 @@ input[type='checkbox'] {
 }
 
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .fullwidth ul {
